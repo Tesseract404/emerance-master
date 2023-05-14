@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "638729281256",
+    "firebase_url": "https://emerance-1111-default-rtdb.firebaseio.com",
+    "project_id": "emerance-1111",
+    "storage_bucket": "emerance-1111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638729281256:android:5b0d5db8c9f72d5f2fb35d",
+        "android_client_info": {
+          "package_name": "com.example.emerance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638729281256-daub8g390hq7sddk7mgcpa0leegrta3d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emerance",
+            "certificate_hash": "895190bca3c705c6520b80ea9d53f6ffe0120228"
+          }
+        },
+        {
+          "client_id": "638729281256-r11r834t87jarqn52tdra04q4plfthko.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2v6SlKLjsV8k09OhggNzkYRa6ERPRI8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638729281256-r11r834t87jarqn52tdra04q4plfthko.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
