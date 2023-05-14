@@ -1,0 +1,106 @@
+//new try
+
+  // final user = UserModel(
+  //     name: _nameController,
+  //     dob: _dobController,
+  //     email: _emailController,
+  //     address: _addressController,
+  //     phoneNo: _phonenoController,
+  //     password: _passwordController)
+
+  //new try
+
+
+  /// 2ND TRY ///
+
+                        // Expanded(
+                        //   flex: 4,
+                        //     child: Padding(
+                        //       padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
+                        //       child: Container(
+                        //         height: 30,
+                        //         width: 20,
+                        //         decoration: BoxDecoration(
+                        //           borderRadius: BorderRadius.circular(30.00),
+                        //           color: Colors.white,
+                        //         ),
+                        //         child: Center(
+                        //           child: Text(
+                        //              _dateTime.day.toString()+' | '+_dateTime.month.toString()+' | '+_dateTime.year.toString(),
+                        //
+                        //             style: TextStyle(
+                        //                 fontSize: 18,
+                        //               color: Colors.black,
+                        //               fontWeight: FontWeight.w600
+                        //             ),
+                        //           ),
+                        //         ),
+                        //       ),
+                        //     )),
+                        // Expanded(flex:2,
+                        //     child:
+                        // Padding(
+                        //   padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
+                        //   child: InkWell(
+                        //       onTap: (){
+                        //         showDatePicker(
+                        //           context: context,
+                        //           initialDate: DateTime.now(),
+                        //           firstDate: DateTime(1900),
+                        //           lastDate: DateTime(2090),
+                        //         ).then((value){
+                        //            _dateTime = value!;
+                        //            //_dobController.onChangeDate(value);
+                        //           if(value==null){
+                        //             _dobController.selectedDate.value;
+                        //             _dobController.onChangeDate(value);
+                        //           }
+                        //         });
+                        //       },
+                        //       child: Icon(
+                        //         Icons.date_range_sharp,
+                        //         color: Colors.blueAccent,
+                        //         size:  30,
+                        //       )
+                        //     ),
+                        //
+                        // )
+                        // )
+                        /// 2ND TRY ///
+
+                        ///  MAIN WIDGET ///
+                        // Expanded(
+                        //     flex: 4,
+                        //     child: Container(
+                        //       height: 30,
+                        //       width: 10,
+                        //       child: TextField(
+                        //         //obscureText: true,
+                        //         controller: _dobController,
+                        //         decoration: InputDecoration(
+                        //           filled: true,
+                        //           fillColor: Colors.white,
+                        //           enabledBorder: OutlineInputBorder(
+                        //             borderRadius: BorderRadius.circular(80),
+                        //           ),
+                        //           // labelText:'Password',
+                        //           labelStyle: TextStyle(
+                        //               fontWeight: FontWeight.w500,
+                        //               fontFamily: 'PlayfairDisplay'
+                        //           ),
+                        //           focusedBorder: OutlineInputBorder(
+                        //             borderRadius: BorderRadius.circular(80),
+                        //           ),
+                        //
+                        //         ),
+                        //       ),
+                        //     )
+                        // ),
+                        ///  MAIN WIDGET ///
+                        //////////////////////    FROM DOCS      /////////////////
+                                        // Padding(
+                                        //   padding: const EdgeInsets.fromLTRB(1, 0, 1, 10),
+                                        //   child: togglebuttons(),
+                                        // ),
+
+                                        //////////////////////    FROM DOCS      /////////////////
