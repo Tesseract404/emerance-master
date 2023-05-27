@@ -13,7 +13,6 @@ class _LoginPage extends State<LoginPage>{
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-
   String error =  "";
   Future signIn() async {
     try {
@@ -178,7 +177,7 @@ class _LoginPage extends State<LoginPage>{
                       signIn();
                     },
                     child: Center(
-                      child: Text(
+                      child:Text(
                         "Log in",
                         style: TextStyle(
                             color: Colors.white,

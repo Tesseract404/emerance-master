@@ -32,31 +32,26 @@ class _CarPackagePageState extends State<CarPackagePage> {
         ),
 
       ),
-      body: Column(
-        children: [
-          Divider(
-            thickness: 1,
-
-          ),
-          gap(height: 50, width: 5),
-          Text('Our Car Insurances',
-            style: TextStyle(
-              fontFamily: 'Academy Engraved LET',
-              fontSize: 25,
-              fontWeight: FontWeight.w800,
-              color: Colors.black87 ,
+      body: Container(
+        child: Column(
+          children: [
+            Divider(
+              thickness: 1,
             ),
-          ),
-          gap(height: 50, width: 1),
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-              //color: Colors.red
+            gap(height: 50, width: 5),
+            Text('Our Car Insurances',
+              style: TextStyle(
+                fontFamily: 'Academy Engraved LET',
+                fontSize: 25,
+                fontWeight: FontWeight.w800,
+                color: Colors.black87 ,
+              ),
             ),
-            child: Column(
+            gap(height: 50, width: 1),
+            Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.fromLTRB( 24 , 25, 0, 0),
                   child: Row(
                     children: [
                       GestureDetector(
@@ -69,27 +64,24 @@ class _CarPackagePageState extends State<CarPackagePage> {
                         details: '24/7 Towing Assistance up to *50 KM'
                         ),
                       ),
-                       Expanded(
-                         flex: 2,
-                         child: Padding(
-                           padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                           child: GestureDetector(
-                             onTap: (){
-                               Navigator.pushNamed(context, '/car_s');
-                             },
-                             child: Planwidget(
+                       Padding(
+                         padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+                         child: GestureDetector(
+                           onTap: (){
+                             Navigator.pushNamed(context, '/car_s');
+                           },
+                           child: Planwidget(
                       image: 'assets/Silver.png',
                       title: 'Silver Plan',
                       details: '24/7 Towing Assistance up to *70 KM'
                       ),
-                           ),
                          ),
                        ),
                      ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 15),
+                  padding: const EdgeInsets.fromLTRB( 24 , 20, 0, 0),
                   child: Row(
                     children: [
                       GestureDetector(
@@ -102,19 +94,16 @@ class _CarPackagePageState extends State<CarPackagePage> {
                             details: '24/7 Towing Assistance up to *100 KM'
                         ),
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: GestureDetector(
-                            onTap: (){
-                              Navigator.pushNamed(context, '/car_p');
-                            },
-                            child: Planwidget(
-                                image: 'assets/Platinum.png',
-                                title: 'Platinum Plan',
-                                details: '24/7 Towing Assistance up to *200 KM'
-                            ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context, '/car_p');
+                          },
+                          child: Planwidget(
+                              image: 'assets/Platinum.png',
+                              title: 'Platinum Plan',
+                              details: '24/7 Towing Assistance up to *200 KM'
                           ),
                         ),
                       ),
@@ -123,8 +112,8 @@ class _CarPackagePageState extends State<CarPackagePage> {
                 )
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -68,7 +68,8 @@ class _SignUpPage extends State<SignUpPage> {
       );
     } on FirebaseAuthException catch (e) {
       setState(() {
-        error = e.message!;
+        // error = e.message!;
+        toasts.toastMessage(e.message!);
       });
     }
   }
