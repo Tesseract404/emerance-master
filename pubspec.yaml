@@ -77,6 +77,16 @@ flutter:
    - assets/Silver.png
    - assets/Platinum.png
    - assets/Bronze.png
+   - assets/ambulance.png
+   - assets/tow.png
+   - assets/car.png
+   - assets/health.png
+   - assets/minor.png
+   - assets/major.png
+   - assets/battery.png
+   - assets/fuel.png
+   - assets/tire.png
+   - assets/windcrack.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

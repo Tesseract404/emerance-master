@@ -56,7 +56,7 @@ class _HealthPackagePageState extends State<HealthPackagePage> {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  padding: const EdgeInsets.fromLTRB( 24 , 25, 0, 0),
                   child: Row(
                     children: [
                       GestureDetector(
@@ -69,19 +69,16 @@ class _HealthPackagePageState extends State<HealthPackagePage> {
                             details: 'Up to RM 25,000 Coverage'
                         ),
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: GestureDetector(
-                            onTap: (){
-                              Navigator.pushNamed(context, '/health_s');
-                            },
-                            child: Planwidget(
-                                image: 'assets/Silver.png',
-                                title: 'Silver Plan',
-                                details: 'Up to RM 50,000 Coverage'
-                            ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context, '/health_s');
+                          },
+                          child: Planwidget(
+                              image: 'assets/Silver.png',
+                              title: 'Silver Plan',
+                              details: 'Up to RM 50,000 Coverage'
                           ),
                         ),
                       ),
@@ -89,7 +86,7 @@ class _HealthPackagePageState extends State<HealthPackagePage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25,vertical: 15),
+                  padding: const EdgeInsets.fromLTRB( 24 , 25, 0, 0),
                   child: Row(
                     children: [
                       GestureDetector(
@@ -102,19 +99,16 @@ class _HealthPackagePageState extends State<HealthPackagePage> {
                             details: 'Up to RM 75,000 Coverage'
                         ),
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                          child: GestureDetector(
-                            onTap: (){
-                              Navigator.pushNamed(context, '/health_p');
-                            },
-                            child: Planwidget(
-                                image: 'assets/Platinum.png',
-                                title: 'Platinum Plan',
-                                details: 'Up to RM 1,00,000 Coverage'
-                            ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.pushNamed(context, '/health_p');
+                          },
+                          child: Planwidget(
+                              image: 'assets/Platinum.png',
+                              title: 'Platinum Plan',
+                              details: 'Up to RM 1,00,000 Coverage'
                           ),
                         ),
                       ),

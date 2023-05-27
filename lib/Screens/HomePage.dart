@@ -110,10 +110,10 @@ class _HomePageState extends State<HomePage> {
                       padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
                       child: Center(
                           child: BoxbuttonWidget(
-                        title: 'Claim Insurance',
+                        title: 'Insurance Dashboard',
                         iconData: CupertinoIcons.money_dollar_circle_fill,
                         color: Colors.white,
-                        routeName: '/claim',
+                        routeName: '/insurancedash',
                         iconcolor: Colors.amber,
                       )),
                     ),

@@ -1,10 +1,12 @@
 
-import 'package:emerance/Screens/ClaimPage.dart';
+import 'package:emerance/Screens/Insurance/Ins_Details.dart';
+import 'package:emerance/Screens/Insurance/InsuranceDashboard.dart';
 import 'package:emerance/Screens/HomePage.dart';
 import 'package:emerance/Auth/main_page.dart';
 import 'package:emerance/Screens/CarPackagePage.dart';
 import 'package:emerance/Screens/SosPage.dart';
 import 'package:emerance/Screens/CarPacks/CarBronzePage.dart';
+import 'package:emerance/Screens/submitDetailsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -19,9 +21,10 @@ import 'Screens/HealthPacks/HealthPlatPage.dart';
 import 'Screens/HealthPacks/HealthSilverPage.dart';
 import 'Screens/LandingPage.dart';
 import 'Screens/LoginPage.dart';
+import 'Screens/Map.dart';
 import 'Screens/SignUpPage.dart';
 import 'Screens/UserProfilePage.dart';
-import 'Screens/ClaimPage.dart';
+import 'Screens/Insurance/InsuranceDashboard.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +40,7 @@ void main() async{
         '/userProfile' : (context) => const UserProfilePage(),
         '/home' : (context) => const HomePage(),
         '/editD' : (context) => const DetailsEdit(),
-        '/claim' : (context) => const ClaimPage(),
+        '/insurancedash' : (context) => const InsuranceDashboard(),
         '/carpackages' : (context) => const CarPackagePage(),
         '/healthpackages' : (context) => const HealthPackagePage(),
         '/sos' : (context) => const SosPage(),
@@ -49,6 +52,9 @@ void main() async{
         '/health_s' : (context) => const HealthSilverPage(),
         '/health_g' : (context) => const HealthGoldPage(),
         '/health_p' : (context) => const HealthPlatPage(),
+        '/map' : (context) =>  const Maps(),
+        '/submit' : (context) =>  const submitDetailsPage(),
+        '/ins_details' : (context) =>  const Ins_Details(plan: 'asad', image: ' dasd', name: ' dsa1', model: 'das1', year: ' ads1', vNo: 'asas1 ',exDate: 'sadad',),
 
       },
       initialRoute: '/login',
