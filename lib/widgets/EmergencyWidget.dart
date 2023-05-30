@@ -12,7 +12,12 @@ class EmergencyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.pushNamed(context, '/map');
+        if(title=='Ambulance') {
+          Navigator.pushNamed(context, '/map_a');
+        }
+        else{
+          Navigator.pushNamed(context, '/map_t');
+        }
       },
       child: Container(
         height: MediaQuery.of(context).size.height * 0.23,
