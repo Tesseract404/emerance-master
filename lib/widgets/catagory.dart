@@ -29,7 +29,8 @@ class catagory extends StatelessWidget {
                     fontSize: 18,
                 ),),
                 onPressed: (){
-                  Navigator.pushNamed(context, '/map');
+                  Navigator.popAndPushNamed(context, '/map_m');
+
                 },
             ),
 
@@ -39,7 +40,7 @@ class catagory extends StatelessWidget {
                     fontSize: 18,
                 ),),
                 onPressed: (){
-                  Navigator.pushNamed(context, '/map');
+                  Navigator.popAndPushNamed(context, '/map_t');
                 },
             ),
           ],

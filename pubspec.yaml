@@ -89,6 +89,8 @@ flutter:
    - assets/fuel.png
    - assets/tire.png
    - assets/windcrack.png
+   - assets/siren.png
+   - assets/mechanic.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
