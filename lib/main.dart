@@ -4,8 +4,10 @@ import 'package:emerance/Screens/Insurance/InsuranceDashboard.dart';
 import 'package:emerance/Screens/HomePage.dart';
 import 'package:emerance/Auth/main_page.dart';
 import 'package:emerance/Screens/CarPackagePage.dart';
+import 'package:emerance/Screens/MapMechanic.dart';
 import 'package:emerance/Screens/SosPage.dart';
 import 'package:emerance/Screens/CarPacks/CarBronzePage.dart';
+import 'package:emerance/Screens/callPage.dart';
 import 'package:emerance/Screens/submitDetailsPage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -13,6 +15,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'Screens/CarPacks/CarGoldrPage.dart';
 import 'Screens/CarPacks/CarPlatPage.dart';
 import 'Screens/CarPacks/CarSilverPage.dart';
+import 'Screens/ChattingPage.dart';
 import 'Screens/DetailsEdit.dart';
 import 'Screens/HealthPackagePage.dart';
 import 'Screens/HealthPacks/HealthBronzePage.dart';
@@ -22,7 +25,8 @@ import 'Screens/HealthPacks/HealthSilverPage.dart';
 import 'Screens/Insurance/healthClaimPage.dart';
 import 'Screens/LandingPage.dart';
 import 'Screens/LoginPage.dart';
-import 'Screens/Map.dart';
+import 'Screens/MapAmbulance.dart';
+import 'Screens/MapTow.dart';
 import 'Screens/SignUpPage.dart';
 import 'Screens/UserProfilePage.dart';
 import 'Screens/Insurance/InsuranceDashboard.dart';
@@ -53,13 +57,17 @@ void main() async{
         '/health_s' : (context) => const HealthSilverPage(),
         '/health_g' : (context) => const HealthGoldPage(),
         '/health_p' : (context) => const HealthPlatPage(),
-        '/map' : (context) =>  const Maps(),
+        '/map_a' : (context) =>  const MapAmbulance(),
+        '/map_t' : (context) =>  const MapTow(),
+        '/map_m' : (context) =>  const MapMechanic(),
         '/submit' : (context) =>  const submitDetailsPage(),
         '/carclaim' : (context) =>  const carClaimPage(),
         '/healthclaim' : (context) =>  const healthClaimPage(),
+        '/call' : (context) =>  const callPage(),
+        '/chat' : (context) =>  const ChattingPage(),
 
       },
-      initialRoute: '/map',
+      initialRoute: '/chat',
     )
   );
 }
