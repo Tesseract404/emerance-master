@@ -35,7 +35,6 @@ class _UserProfilePageState extends State<UserProfilePage> {
 
         children: [
           StreamBuilder(
-
               ///working
               stream: FirebaseFirestore.instance
                   .collection("User")
@@ -52,7 +51,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                           child: ListView.builder(
                               itemCount: snapshot.data!.docs.length,
                               shrinkWrap: true,
-                              itemBuilder: (context, i) {
+                              itemBuilder: (context,i) {
                                 var data = snapshot.data!.docs[i];
                                 return Padding(
                                   padding:
@@ -97,24 +96,11 @@ class _UserProfilePageState extends State<UserProfilePage> {
                             shrinkWrap: true,
                             itemBuilder: (context, i) {
                               var data = snapshot.data!.docs[i];
-                              return GestureDetector(
-                                onTap: () {},
-                                child: ReusableRow(
-                                    title: 'Email',
-                                    iconData: Icons.mail_outline,
-                                    value: data['email']),
-                              );
+                              return ReusableRow(
+                                  title: 'Email',
+                                  iconData: Icons.mail_outline,
+                                  value: data['email']);
                             }),
-                        // ListView.builder(
-                        //     itemCount: snapshot.data!.docs.length,
-                        //     shrinkWrap: true,
-                        //     itemBuilder: (context, i) {
-                        //       var data = snapshot.data!.docs[i];
-                        //       return ReusableRow(
-                        //           title: 'Password',
-                        //           iconData: Icons.key_outlined,
-                        //           value: '******');
-                        //     }),
                         ListView.builder(
                             itemCount: snapshot.data!.docs.length,
                             shrinkWrap: true,
@@ -133,7 +119,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                               return ReusableRow(
                                   title: 'Date of Birth',
                                   iconData: Icons.calendar_month,
-                                  value: data['date of birth']);
+                                  value: data['dateofbirth']);
                             }),
 
                         ListView.builder(

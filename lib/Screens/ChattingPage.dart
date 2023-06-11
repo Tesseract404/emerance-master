@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:developer';
 
+import 'package:emerance/Auth/Models/ChatUser.dart';
 import 'package:emerance/widgets/textCard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,8 @@ import 'package:flutter/material.dart';
 import '../Auth/APIs.dart';
 import '../Auth/Models/Message.dart';
 class ChattingPage extends StatefulWidget {
-  const ChattingPage({Key? key}) : super(key: key);
+  final ChatUser user;
+  const ChattingPage({Key? key, required this.user}) : super(key: key);
 
   @override
   State<ChattingPage> createState() => _ChattingPageState();
@@ -16,6 +18,7 @@ class ChattingPage extends StatefulWidget {
 
 class _ChattingPageState extends State<ChattingPage> {
   List<Message>_list =[];
+  final _textController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,22 +72,19 @@ class _ChattingPageState extends State<ChattingPage> {
         children: [
           Expanded(
               child:StreamBuilder(
-                stream: APIs.getAllTexts(),
+                stream: APIs.getAllTexts(widget.user),
                 builder: (context,snapshot) {
                   switch (snapshot.connectionState){
                     case ConnectionState.none:
-                      return const Center(child: CircularProgressIndicator(),);
+                      return const SizedBox();
                     case ConnectionState.waiting:
                     case ConnectionState.active:
                     case ConnectionState.done:
                       final data = snapshot.data?.docs;
                       log('Data: ${jsonEncode(data![0].data())}');
+                      _list =data
+                      ?.map((e) => Message.fromJson(e.data())).toList()??[];
 
-
-                      //final _list = [];
-                      _list.clear();
-                      _list.add(Message(formid: APIs.user.uid  , msg: 'Where are you?', read: '', told: '123' , sent: '12ta'));
-                      _list.add(Message(formid:'xyz'   , msg: 'Home', read: '', told: APIs.user.uid , sent: '12ta'));
                       if(_list.isNotEmpty){
                         return ListView.builder(
                             itemCount: _list.length,
@@ -93,10 +93,13 @@ class _ChattingPageState extends State<ChattingPage> {
                             itemBuilder: (context,index){
                               return textCard(message: _list[index], );
                             });
-                      }else{
-                        return const Center(
-                          child: Text('No internet',
-                          style: TextStyle(fontSize: 20),)
+                      }
+                      else{
+                        return const Scaffold(
+                          body: Center(
+                            child: Text('Send Text',
+                            style: TextStyle(fontSize: 20),)
+                          ),
                         );
                       }
                   }
@@ -121,16 +124,17 @@ class _ChattingPageState extends State<ChattingPage> {
                       child: Row(
                         children: [
                           SizedBox(width: 10,),
-                          Icon(Icons.edit_rounded,
+                          const Icon(Icons.edit_rounded,
                           size:23,
                             color: Colors.black38,
                           ),
                           SizedBox(width: 10,),
-                          const Expanded(
+                           Expanded(
                             child: TextField(
+                              controller: _textController,
                               keyboardType: TextInputType.multiline,
                               maxLines: null,
-                              decoration: InputDecoration(
+                               decoration: const InputDecoration(
                                 hintText: 'Write text',
                                 hintStyle: TextStyle(color: Colors.black38),
                                 border: InputBorder.none,
@@ -138,8 +142,13 @@ class _ChattingPageState extends State<ChattingPage> {
                             ),
                           ),
                           IconButton(
-                            onPressed: (){},
-                             icon: Icon (Icons.send_rounded,size: 25,color: Colors.black38,),
+                            onPressed: (){
+                              if(_textController.text.isNotEmpty){
+                                APIs.sendMessage(widget.user, _textController.text);
+                                _textController.text='';
+                              }
+                            },
+                             icon: const Icon (Icons.send_rounded,size: 25,color: Colors.black38,),
                           )
                         ],
                       ),

@@ -21,7 +21,7 @@ class _SignUpPage extends State<SignUpPage> {
   String error = "";
    late final CollectionReference userList= FirebaseFirestore.instance.collection('User');
 
-  specialController _insuranceController = Get.put(specialController());
+  final specialController _insuranceController = Get.put(specialController());
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _nameController = TextEditingController();
@@ -79,7 +79,7 @@ class _SignUpPage extends State<SignUpPage> {
     await userList.add({
       'name': name,
       'password': pass,
-      'date of birth': dob,
+      'dateofbirth': dob,
       'email': email,
       'phone': phoneNo,
       'address': address,
@@ -353,6 +353,7 @@ class _SignUpPage extends State<SignUpPage> {
                                   borderRadius: BorderRadius.circular(80),
                                 ),
                                 // labelText:'Password',
+                                //prefixText: 'email',
                                 labelStyle: TextStyle(
                                     fontWeight: FontWeight.w500,
                                     fontFamily: 'PlayfairDisplay'),

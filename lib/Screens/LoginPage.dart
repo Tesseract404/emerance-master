@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emerance/widgets/toasts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,6 +13,8 @@ class _LoginPage extends State<LoginPage>{
   //text controllers
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final String adminMail1='adittyaadmin@gmail.com' ;
+  final String adminMail2='nabiladmin@gmail.com' ;
 
   String error =  "";
   Future signIn() async {
@@ -20,7 +23,12 @@ class _LoginPage extends State<LoginPage>{
           email: _emailController.text.trim() ,
           password: _passwordController.text.trim(),
       ).then((value) {
-        Navigator.pushNamed(context, '/home');
+        if(_emailController.text==adminMail1||_emailController.text==adminMail2){
+          Navigator.pushNamed(context, '/adminDash');
+        }else
+          {
+            Navigator.pushNamed(context, '/home');
+          }
       });
     } on FirebaseAuthException catch (e) {
       setState(() {

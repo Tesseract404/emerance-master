@@ -1,4 +1,4 @@
-
+import 'package:emerance/Auth/Models/ChatUser.dart';
 import 'package:emerance/Screens/Insurance/carClaimPage.dart';
 import 'package:emerance/Screens/Insurance/InsuranceDashboard.dart';
 import 'package:emerance/Screens/HomePage.dart';
@@ -7,6 +7,9 @@ import 'package:emerance/Screens/CarPackagePage.dart';
 import 'package:emerance/Screens/MapMechanic.dart';
 import 'package:emerance/Screens/SosPage.dart';
 import 'package:emerance/Screens/CarPacks/CarBronzePage.dart';
+import 'package:emerance/Screens/admin/adminDashPage.dart';
+import 'package:emerance/Screens/admin/adminProfileEdit.dart';
+import 'package:emerance/Screens/admin/adminProfilePage.dart';
 import 'package:emerance/Screens/callPage.dart';
 import 'package:emerance/Screens/submitDetailsPage.dart';
 import 'package:flutter/material.dart';
@@ -31,44 +34,53 @@ import 'Screens/SignUpPage.dart';
 import 'Screens/UserProfilePage.dart';
 import 'Screens/Insurance/InsuranceDashboard.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
-  runApp(
-    MaterialApp(
-      title: "Emerence",
-      routes: {
-        '/': (context) =>  LandingPage(),
-        '/login' : (context) => LoginPage(),
-        '/signup' : (context) =>   SignUpPage(),
-        '/userProfile' : (context) => const UserProfilePage(),
-        '/home' : (context) => const HomePage(),
-        '/editD' : (context) => const DetailsEdit(),
-        '/insurancedash' : (context) => const InsuranceDashboard(),
-        '/carpackages' : (context) => const CarPackagePage(),
-        '/healthpackages' : (context) => const HealthPackagePage(),
-        '/sos' : (context) => const SosPage(),
-        '/car_b' : (context) => const CarBronzePage(),
-        '/car_s' : (context) => const CarSilverPage(),
-        '/car_g' : (context) => const CarGoldPage(),
-        '/car_p' : (context) => const CarPlatPage(),
-        '/health_b' : (context) => const HealthBronzePage(),
-        '/health_s' : (context) => const HealthSilverPage(),
-        '/health_g' : (context) => const HealthGoldPage(),
-        '/health_p' : (context) => const HealthPlatPage(),
-        '/map_a' : (context) =>  const MapAmbulance(),
-        '/map_t' : (context) =>  const MapTow(),
-        '/map_m' : (context) =>  const MapMechanic(),
-        '/submit' : (context) =>  const submitDetailsPage(),
-        '/carclaim' : (context) =>  const carClaimPage(),
-        '/healthclaim' : (context) =>  const healthClaimPage(),
-        '/call' : (context) =>  const callPage(),
-        '/chat' : (context) =>  const ChattingPage(),
-
-      },
-      initialRoute: '/chat',
-    )
-  );
+  runApp(MaterialApp(
+    title: "Emerence",
+    routes: {
+      '/': (context) => LandingPage(),
+      '/login': (context) => LoginPage(),
+      '/signup': (context) => SignUpPage(),
+      '/userProfile': (context) => const UserProfilePage(),
+      '/home': (context) => const HomePage(),
+      '/editD': (context) => const DetailsEdit(),
+      '/insurancedash': (context) => const InsuranceDashboard(),
+      '/carpackages': (context) => const CarPackagePage(),
+      '/healthpackages': (context) => const HealthPackagePage(),
+      '/sos': (context) => const SosPage(),
+      '/car_b': (context) => const CarBronzePage(),
+      '/car_s': (context) => const CarSilverPage(),
+      '/car_g': (context) => const CarGoldPage(),
+      '/car_p': (context) => const CarPlatPage(),
+      '/health_b': (context) => const HealthBronzePage(),
+      '/health_s': (context) => const HealthSilverPage(),
+      '/health_g': (context) => const HealthGoldPage(),
+      '/health_p': (context) => const HealthPlatPage(),
+      '/map_a': (context) => const MapAmbulance(),
+      '/map_t': (context) => const MapTow(),
+      '/map_m': (context) => const MapMechanic(),
+      '/submit': (context) => const submitDetailsPage(),
+      '/carclaim': (context) => const carClaimPage(),
+      '/healthclaim': (context) => const healthClaimPage(),
+      '/call': (context) => const callPage(),
+      '/adminDash': (context) => const adminDashPage(),
+      '/adminprofile': (context) => const adminProfilePage() ,
+      '/adminedit': (context) => const adminProfileEdit() ,
+      '/chat': (context) => ChattingPage(
+          user: ChatUser(
+              address: 'somewhere',
+              dateofbirth: '20-06-2023',
+              email: 'am@gmail.com',
+              image: ' ',
+              insurance: 'Only Health Insurance',
+              name: 'Ambulance',
+              password: '123456',
+              phone: '02111212221',
+              userid: 'mZT8QokLXVQCltLJeE7Ki5ca4vP2')),
+    },
+    initialRoute: '/adminDash',
+  ));
 }
-

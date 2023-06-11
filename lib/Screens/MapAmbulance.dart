@@ -157,7 +157,7 @@ class _MapAmbulanceState extends State<MapAmbulance> {
                                   icons: Icons.phone, iconsize: 20,
                                   iconcolor: CupertinoColors.white),
                               SizedBox(width: 40,),
-                              actionButtonwithIcon(title:'Chat',route: '/map_a',
+                              actionButtonwithIcon(title:'Chat',route: '/chat',
                                   height: 0.05, width: 0.35,
                                   icons: Icons.chat, iconsize: 20,
                                   iconcolor: CupertinoColors.white),
