@@ -17,15 +17,16 @@ class ReusableRow extends StatelessWidget {
         ListTile(
           title:  Text(title,
           style: TextStyle(
-             color: Colors.white
+             color: Colors.black87
           ),
           ),
           leading:  Icon(iconData,
-            color: Colors.white,
+            color: Colors.black87,
           ),
           trailing: Text(value,
             style: TextStyle(
-                color: Colors.lightBlue
+                color: Colors.lightBlue,
+              fontSize: 16
             ),
           ),
         )

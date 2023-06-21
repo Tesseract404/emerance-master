@@ -1,9 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emerance/Auth/specialController.dart';
-import 'package:emerance/Auth/user_model.dart';
-import 'package:emerance/widgets/toasts.dart';
-import 'package:emerance/widgets/togglebuttons.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+ import 'package:emerance/widgets/toasts.dart';
+ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -50,9 +48,8 @@ class _SignUpPage extends State<SignUpPage> {
           .createUserWithEmailAndPassword(
         email: _emailController.text.trim(),
         password: _passwordController.text.trim(),
-      )
-          .then((value) {
-            toasts.toastMessage('Registered Successfully');
+      ).then((value) {
+        toasts.toastMessage('Registered Successfully');
         Navigator.pushNamed(context,'/login');
       });
       addUserDetails(
@@ -79,7 +76,7 @@ class _SignUpPage extends State<SignUpPage> {
     await userList.add({
       'name': name,
       'password': pass,
-      'dateofbirth': dob,
+      'date of birth': dob,
       'email': email,
       'phone': phoneNo,
       'address': address,

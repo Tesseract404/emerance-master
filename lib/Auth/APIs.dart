@@ -1,13 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emerance/Auth/Models/Message.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 import 'Models/ChatUser.dart';
 
 class APIs {
-  static FirebaseAuth auth = FirebaseAuth.instance;
 
   static FirebaseFirestore firestore = FirebaseFirestore.instance;
+  static FirebaseAuth auth = FirebaseAuth.instance;
 
   static User get user => auth.currentUser!;
 

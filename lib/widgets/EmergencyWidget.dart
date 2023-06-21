@@ -20,28 +20,29 @@ class EmergencyWidget extends StatelessWidget {
         }
       },
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.23,
-        width: MediaQuery.of(context).size.width * 0.50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
           color: Color(0xffced7db)
         ),
-        child: Column(
-          children: [
-            Image(
-              image: AssetImage(image),
-              height: 135,
-              width: 135,
-            ),
-            gap(height: 12, width: 1),
-            Text(title,
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w800,
-                color: Colors.black87 ,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(25, 15, 25, 15),
+          child: Column(
+            children: [
+              Image(
+                image: AssetImage(image),
+                height: 135,
+                width: 135,
               ),
-            )
-          ],
+              gap(height: 12, width: 1),
+              Text(title,
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black87 ,
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
