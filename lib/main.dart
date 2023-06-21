@@ -10,6 +10,7 @@ import 'package:emerance/Screens/CarPacks/CarBronzePage.dart';
 import 'package:emerance/Screens/admin/adminDashPage.dart';
 import 'package:emerance/Screens/admin/adminProfileEdit.dart';
 import 'package:emerance/Screens/admin/adminProfilePage.dart';
+import 'package:emerance/Screens/admin/claimListPage.dart';
 import 'package:emerance/Screens/callPage.dart';
 import 'package:emerance/Screens/submitDetailsPage.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,9 @@ import 'Screens/MapTow.dart';
 import 'Screens/SignUpPage.dart';
 import 'Screens/UserProfilePage.dart';
 import 'Screens/Insurance/InsuranceDashboard.dart';
+import 'Screens/admin/incomeStatementPage.dart';
+import 'Screens/admin/salesPage.dart';
+import 'Screens/paymentGatewayPage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -68,7 +72,11 @@ void main() async {
       '/call': (context) => const callPage(),
       '/adminDash': (context) => const adminDashPage(),
       '/adminprofile': (context) => const adminProfilePage() ,
+      '/payment': (context) => const paymentGatewayPage() ,
+      '/sales': (context) => const salesPage() ,
+      '/claimList': (context) => const claimListPage() ,
       '/adminedit': (context) => const adminProfileEdit() ,
+      '/income': (context) => const incomeStatementPage() ,
       '/chat': (context) => ChattingPage(
           user: ChatUser(
               address: 'somewhere',

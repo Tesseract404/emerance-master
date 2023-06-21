@@ -62,9 +62,9 @@ class _adminDashPageState extends State<adminDashPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 dashboradBox(title: 'Sales', image: 'assets/sales.png', route: '',),
-                 dashboradBox(title: 'Claim List', image: 'assets/list.png', route: '',),
-                 dashboradBox(title: 'Income Statement', image: 'assets/income.png', route: '',),
+                 dashboradBox(title: 'Sales', image: 'assets/sales.png', route: '/sales',),
+                 dashboradBox(title: 'Claim List', image: 'assets/list.png', route: '/claimList',),
+                 dashboradBox(title: 'Income Statement', image: 'assets/income.png', route: '/income',),
               ],
             ),
             dashboardCard(title: 'Users Info', image: 'assets/user.png', route: ''),

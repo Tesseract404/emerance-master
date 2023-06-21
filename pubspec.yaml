@@ -99,6 +99,9 @@ flutter:
    - assets/amdriver.png
    - assets/trdriver.png
    - assets/graph.png
+   - assets/phonepay.png
+   - assets/card.png
+   - assets/bank.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

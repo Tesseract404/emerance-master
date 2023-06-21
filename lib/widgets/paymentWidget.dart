@@ -1,38 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
-class dashboradBox extends StatelessWidget {
-  final String title;
+class paymentWidget extends StatelessWidget {
+  final title;
   final String image;
   final String route;
-  const dashboradBox(
-      {Key? key, required this.title, required this.image, required this.route})
+  const paymentWidget(
+      {Key? key, this.title, required this.image, required this.route})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context,route);
+      onTap: (){
+        Navigator.pushNamed(context, route);
       },
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
+        padding: const EdgeInsets.all(8.0),
         child: Container(
           height: 110,
           width: 110,
           decoration: BoxDecoration(
-            color: Colors.black12,
-            borderRadius: BorderRadius.circular(5),
+            borderRadius: BorderRadius.circular(8),
+            color: Color(0xFFbdc9c1),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(
-                child: Image(
-                  image: AssetImage(image),
-                  height: 50,
-                  width: 50,
-                ),
+              SizedBox(
+                height: 12,
+              ),
+              Image(
+                image: AssetImage(image),
+                height: 65,
+                width: 65,
               ),
               SizedBox(
                 height: 5,
@@ -40,9 +40,8 @@ class dashboradBox extends StatelessWidget {
               Text(
                 title,
                 style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black87,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
                 ),
               )
             ],

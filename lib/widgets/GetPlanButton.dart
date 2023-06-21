@@ -13,6 +13,7 @@ class GetPlanButton extends StatelessWidget {
       ),
       child: MaterialButton(
         onPressed: () {
+          Navigator.pushNamed(context, '/payment');
         },
         child: Center(
           child: Text(

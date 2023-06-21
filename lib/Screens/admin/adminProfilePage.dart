@@ -1,10 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:emerance/widgets/actionButton.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/ReusableRow.dart';
 import '../../widgets/adminWidgets/ReusableRowAdmin.dart';
 
 class adminProfilePage extends StatefulWidget {
@@ -135,7 +133,7 @@ class _adminProfilePageState extends State<adminProfilePage> {
                               onTap: () {
                                 setState(() {
                                   FirebaseAuth.instance.signOut();
-                                  Navigator.pushNamed(context, '/adminedit');
+                                  Navigator.pushNamed(context,'/adminedit');
                                 });
                               },
                             ),

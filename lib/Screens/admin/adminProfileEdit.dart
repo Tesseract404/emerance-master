@@ -26,12 +26,12 @@ class _adminProfileEditState extends State<adminProfileEdit> {
 
   // void _getProfileData() async {
   //   final User? user = await _auth.currentUser;
-  //   _name = user?.name;
-  //   _email = user?.email!;
+  //   _name =
+  //   _email = ' ' ,
   // }
 
   void _updateProfileData() {
-    _database.child('admin/${_auth.currentUser?.uid}').update({
+    _database.child('admin/${_auth.currentUser!.uid}').update({
       'name': _name,
       'email': _email,
     });
