@@ -1,3 +1,5 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emerance/Auth/Models/ChatUser.dart';
 import 'package:emerance/Screens/Insurance/carClaimPage.dart';
 import 'package:emerance/Screens/Insurance/InsuranceDashboard.dart';
@@ -11,14 +13,18 @@ import 'package:emerance/Screens/admin/adminDashPage.dart';
 import 'package:emerance/Screens/admin/adminProfileEdit.dart';
 import 'package:emerance/Screens/admin/adminProfilePage.dart';
 import 'package:emerance/Screens/admin/claimListPage.dart';
+import 'package:emerance/Screens/approvalPage.dart';
 import 'package:emerance/Screens/callPage.dart';
+import 'package:emerance/Screens/chatListPage.dart';
 import 'package:emerance/Screens/submitDetailsPage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 import 'Screens/CarPacks/CarGoldrPage.dart';
 import 'Screens/CarPacks/CarPlatPage.dart';
 import 'Screens/CarPacks/CarSilverPage.dart';
+import 'Screens/CarPacks/carDetailsPage.dart';
 import 'Screens/ChattingPage.dart';
 import 'Screens/DetailsEdit.dart';
 import 'Screens/HealthPackagePage.dart';
@@ -26,6 +32,7 @@ import 'Screens/HealthPacks/HealthBronzePage.dart';
 import 'Screens/HealthPacks/HealthGoldPage.dart';
 import 'Screens/HealthPacks/HealthPlatPage.dart';
 import 'Screens/HealthPacks/HealthSilverPage.dart';
+import 'Screens/HealthPacks/healthDetailsPage.dart';
 import 'Screens/Insurance/healthClaimPage.dart';
 import 'Screens/LandingPage.dart';
 import 'Screens/LoginPage.dart';
@@ -59,6 +66,8 @@ void main() async {
       '/car_s': (context) => const CarSilverPage(),
       '/car_g': (context) => const CarGoldPage(),
       '/car_p': (context) => const CarPlatPage(),
+      '/carDetails': (context) => const carDetailsPage(),
+      '/healthDetails': (context) => const healthDetailsPage(),
       '/health_b': (context) => const HealthBronzePage(),
       '/health_s': (context) => const HealthSilverPage(),
       '/health_g': (context) => const HealthGoldPage(),
@@ -77,18 +86,42 @@ void main() async {
       '/claimList': (context) => const claimListPage() ,
       '/adminedit': (context) => const adminProfileEdit() ,
       '/income': (context) => const incomeStatementPage() ,
+      '/approval': (context) => const approvalPage() ,
+      '/chatlist': (context) => const chatListPage() ,
       '/chat': (context) => ChattingPage(
-          user: ChatUser(
-              address: 'somewhere',
-              dateofbirth: '20-06-2023',
-              email: 'am@gmail.com',
+
+          user: FirebaseAuth.instance.currentUser!.uid!='454Nz0FjQOSz20uJlbXfTqFe8l92'?
+          ChatUser(
+              address: 'banani',
+              dateofbirth: '02-05-2023',
+              email: 'rain@gmail.com',
               image: ' ',
-              insurance: 'Only Health Insurance',
+              insurance: 'Car & Health Insurace',
               name: 'Ambulance',
               password: '123456',
-              phone: '02111212221',
-              userid: 'mZT8QokLXVQCltLJeE7Ki5ca4vP2')),
+              phone: '01224422164',
+              userid: '454Nz0FjQOSz20uJlbXfTqFe8l92'
+            //FirebaseFirestore.instance.collection('User').doc('454Nz0FjQOSz20uJlbXfTqFe8l92')
+          ):ChatUser(
+              address: 'silicon valley',
+              dateofbirth: '04-05-2016',
+              email: 'jawad@gmail.com',
+              image: ' ',
+              insurance: 'Car & Health Insurace',
+              name: 'jawad rahman',
+              password: '123456',
+              phone: '23111113651',
+              userid: 'HiAqbvTLXgQ3tuSZYLYXB881I7b2'
+            //FirebaseFirestore.instance.collection('User').doc('454Nz0FjQOSz20uJlbXfTqFe8l92')
+          )),
     },
-    initialRoute: '/adminDash',
+    initialRoute: '/home',
+    // home: AnimatedSplashScreen(
+    //   duration: 3000,
+    //   splashTransition: SplashTransition.fadeTransition,
+    //   splash: Image(
+    //     image: AssetImage('assets/logo.png'),
+    //   ), nextScreen: SosPage(),
+    // ),
   ));
 }

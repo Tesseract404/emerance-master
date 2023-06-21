@@ -64,7 +64,7 @@ class _submitDetailsPageState extends State<submitDetailsPage> {
             ),
           ),
           SizedBox(height: 40),
-          const actionButton(height: 0.05, width: 0.4, route: '/map', title: 'Submit',),
+          const actionButton(height: 0.05, width: 0.4, route: '/approval', title: 'Submit',),
 
         ],
       )

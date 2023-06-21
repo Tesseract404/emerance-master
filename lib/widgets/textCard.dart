@@ -16,8 +16,8 @@ class _textCardState extends State<textCard> {
   @override
   Widget build(BuildContext context) {
     return APIs.user.uid == widget.message.formid
-        ?_receiver()
-        :_sender();
+        ?_sender()
+        :_receiver();
   }
 
   Widget _sender(){

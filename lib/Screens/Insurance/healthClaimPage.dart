@@ -56,9 +56,8 @@ class _healthClaimPageState extends State<healthClaimPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Owner Name :' +
+                      'Name :'  ,
                           //widget.name
-                          'Ratib Khan',
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w600,
@@ -68,9 +67,7 @@ class _healthClaimPageState extends State<healthClaimPage> {
                     ),
                     gap(height: 5, width: 1),
                     Text(
-                      'Vehicle Model :' +
-                          //widget.model,
-                          'Honda Civic',
+                      'Age :'  ,
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w600,
@@ -80,7 +77,7 @@ class _healthClaimPageState extends State<healthClaimPage> {
                     ),
                     gap(height: 5, width: 1),
                     Text(
-                      'Vehicle Year : 2016' ,
+                      'Sex :  ' ,
                       style: TextStyle(
                         fontSize: 17,
                         fontWeight: FontWeight.w600,
@@ -114,16 +111,16 @@ class _healthClaimPageState extends State<healthClaimPage> {
             ),
           ),
           gap(height: 18, width: 0),
-          Center(
-            child: Text(
-              'Populer Reasons',
-              style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.w800,
-                color: Colors.black87,
-              ),
-            ),
-          ),
+          // Center(
+          //   child: Text(
+          //     'Populer Reasons',
+          //     style: TextStyle(
+          //       fontSize: 23,
+          //       fontWeight: FontWeight.w800,
+          //       color: Colors.black87,
+          //     ),
+          //   ),
+          // ),
           // Padding(
           //   padding: const EdgeInsets.fromLTRB(45, 5, 20, 0),
           //   child: Column(
@@ -155,9 +152,9 @@ class _healthClaimPageState extends State<healthClaimPage> {
             child: Column(
               children:const [
                 gap(height: 10, width: 1),
-                actionButton(height: 0.06, width: 0.4,title: 'Others', route: '/submit',),
+                actionButton(height: 0.06, width: 0.4,title: 'Claim Now', route: '/submit',),
                 gap(height: 16, width: 1),
-                actionButton(height: 0.06, width: 0.4,title: 'Hotline', route: '/submit',),
+                actionButton(height: 0.06, width: 0.4,title: 'Hotline', route: ' ',),
               ],
             ),
           ),

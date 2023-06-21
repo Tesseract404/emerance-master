@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:emerance/widgets/ReusableRow.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class UserProfilePage extends StatefulWidget {
@@ -15,16 +16,25 @@ class _UserProfilePageState extends State<UserProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF00072D),
+      backgroundColor: Color(0xFFebebeb),
       appBar: AppBar(
         automaticallyImplyLeading: true,
-        leading: BackButton(),
-        backgroundColor: Color(0xFF00072D),
+        leading: GestureDetector(
+          child: Icon(
+            CupertinoIcons.back,
+            color: Colors.black87,
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+        backgroundColor: Color(0xFFebebeb),
         elevation: 0,
         title: Text(
           'Profile',
           textAlign: TextAlign.start,
           style: TextStyle(
+            color: Colors.black87,
             fontFamily: 'PlayfairDisplay',
             fontSize: 19,
             fontWeight: FontWeight.w500,
@@ -119,7 +129,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
                               return ReusableRow(
                                   title: 'Date of Birth',
                                   iconData: Icons.calendar_month,
-                                  value: data['dateofbirth']);
+                                  value: data['date of birth']);
                             }),
 
                         ListView.builder(

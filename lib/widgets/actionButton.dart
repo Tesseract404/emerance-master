@@ -31,7 +31,7 @@ class actionButton extends StatelessWidget {
             style: TextStyle(
                 color: Colors.white,
                 fontFamily: 'PlayfairDisplay',
-                fontSize: 22.5,
+                fontSize: 21,
                 fontWeight: FontWeight.w500
             ),
           ),

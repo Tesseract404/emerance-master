@@ -26,22 +26,22 @@ class _HomePageState extends State<HomePage> {
                 child: Container(
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: MediaQuery.of(context).size.width * 5.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       borderRadius:
                           BorderRadius.vertical(bottom: Radius.circular(25)),
                       color: Colors.black87),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
+                      const Padding(
+                        padding: EdgeInsets.all(10.0),
                         child: Icon(
                           CupertinoIcons.bars,
                           color: Colors.blueAccent,
                           size: 35,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
                         child: Text(
                           'Emerance',
                           style: TextStyle(
@@ -52,8 +52,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(45, 170, 0, 0),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(45, 170, 0, 0),
                         child: Icon(
                           Icons.settings,
                           color: Colors.white70,
@@ -64,8 +64,8 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           Navigator.pushNamed(context, '/userProfile');
                         },
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(15, 170, 0, 0),
+                        child: const Padding(
+                          padding: EdgeInsets.fromLTRB(15, 170, 0, 0),
                           child: Icon(
                             Icons.person,
                             color: Colors.white70,
@@ -84,8 +84,8 @@ class _HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                       child: Center(
                           child: BoxbuttonWidget(
                         title: 'Our Car Insurance Plans',
@@ -95,8 +95,8 @@ class _HomePageState extends State<HomePage> {
                         iconcolor: Colors.black45,
                       )),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(0, 5, 0, 5),
                       child: Center(
                           child: BoxbuttonWidget(
                         title: 'Our Health Insurance Plans',
@@ -106,8 +106,8 @@ class _HomePageState extends State<HomePage> {
                         iconcolor: Colors.redAccent,
                       )),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(0, 5, 0, 0),
                       child: Center(
                           child: BoxbuttonWidget(
                         title: 'Insurance Dashboard',
@@ -128,12 +128,28 @@ class _HomePageState extends State<HomePage> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(180),
                             ),
-                            child: Image(
+                            child: const Image(
                               image: AssetImage('assets/Sos.png'),
                             ),
                           ),
                         ),
                       ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        GestureDetector(
+                          onTap: (){
+                           Navigator.pushNamed(context, '/chatlist');
+                          },
+                          child: const Icon(
+                            Icons.chat,
+                            color: Colors.blueGrey,
+                            size: 45,
+                          ),
+                        ),
+                        const SizedBox(width: 10,)
+                      ],
                     )
                   ],
                 ),
