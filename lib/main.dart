@@ -115,7 +115,7 @@ void main() async {
             //FirebaseFirestore.instance.collection('User').doc('454Nz0FjQOSz20uJlbXfTqFe8l92')
           )),
     },
-    initialRoute: '/home',
+    initialRoute: '/',
     // home: AnimatedSplashScreen(
     //   duration: 3000,
     //   splashTransition: SplashTransition.fadeTransition,
